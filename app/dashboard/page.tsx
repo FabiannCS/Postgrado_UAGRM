@@ -13,33 +13,33 @@ const stats = [
         label: "Aprobados",
         value: 2,
         icon: CheckCircle,
-        color: "text-green-700", // Icono y texto fuerte
-        bg: "bg-green-100",      // Fondo más visible (antes era 50)
-        border: "border-green-200" // Borde sutil
+        color: "text-green-700 dark:text-green-400", // Icono y texto fuerte
+        bg: "bg-green-100 dark:bg-green-900/20",      // Fondo más visible (antes era 50)
+        border: "border-green-200 dark:border-green-900" // Borde sutil
     },
     {
         label: "Reprobados",
         value: 1,
         icon: XCircle,
-        color: "text-red-700",
-        bg: "bg-red-100",
-        border: "border-red-200"
+        color: "text-red-700 dark:text-red-400",
+        bg: "bg-red-100 dark:bg-red-900/20",
+        border: "border-red-200 dark:border-red-900"
     },
     {
         label: "Cursando",
         value: 2,
         icon: Clock,
-        color: "text-blue-700",
-        bg: "bg-blue-100",
-        border: "border-blue-200"
+        color: "text-blue-700 dark:text-blue-400",
+        bg: "bg-blue-100 dark:bg-blue-900/20",
+        border: "border-blue-200 dark:border-blue-900"
     },
     {
         label: "Promedio",
         value: "87.50",
         icon: Award,
-        color: "text-purple-700",
-        bg: "bg-purple-100",
-        border: "border-purple-200"
+        color: "text-purple-700 dark:text-purple-400",
+        bg: "bg-purple-100 dark:bg-purple-900/20",
+        border: "border-purple-200 dark:border-purple-900"
     },
 ];
 
@@ -78,8 +78,8 @@ export default function DashboardPage() {
 
             {/* Título con animación suave */}
             <motion.div variants={itemVariants} className="flex flex-col gap-1">
-                <h1 className="text-3xl font-bold tracking-tight text-slate-900">Mis Notas</h1>
-                <p className="text-sm text-slate-500">Resumen de tu avance académico y calificaciones.</p>
+                <h1 className="text-2xl font-bold tracking-tight text-foreground">Mis Notas</h1>
+                <p className="text-sm text-muted-foreground">Resumen de tu avance académico y calificaciones.</p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -89,15 +89,15 @@ export default function DashboardPage() {
                     variants={itemVariants}
                     className="hidden lg:block lg:col-span-4 xl:col-span-3"
                 >
-                    <Card className="border-none shadow-lg bg-white overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <Card className="border-none shadow-lg bg-card text-card-foreground overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         {/* Fondo con Gradiente UAGRM */}
                         <div className="h-28 bg-linear-to-r from-blue-900 via-blue-800 to-blue-900 w-full relative">
                             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                         </div>
 
-                        <CardContent className="flex flex-col items-center -mt-14 text-center space-y-3 pb-8 px-6">
-                            <div className="relative h-28 w-28 rounded-full overflow-hidden border-[5px] border-white shadow-lg bg-white ring-1 ring-slate-100">
-                                <div className="h-full w-full bg-linear-to-br from-slate-100 to-slate-300 flex items-center justify-center text-slate-400 font-bold text-3xl">
+                        <CardContent className="bg-card flex flex-col items-center -mt-14 text-center space-y-3 pb-8 px-6">
+                            <div className="relative h-28 w-28 rounded-full overflow-hidden border-[5px] border-card shadow-lg bg-card ring-1 ring-border">
+                                <div className="h-full w-full bg-muted flex items-center justify-center text-muted-foreground font-bold text-3xl">
                                     <NextImage
                                         src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                         alt="Foto de perfil"
@@ -108,16 +108,16 @@ export default function DashboardPage() {
                                 </div>
                             </div>
                             <div className="w-full">
-                                <h2 className="text-xl font-bold text-slate-800">María González</h2>
-                                <div className="flex items-center justify-center gap-2 text-xs text-slate-500 mt-2 bg-slate-50 py-1.5 px-3 rounded-full mx-auto w-fit border border-slate-100">
+                                <h2 className="text-xl font-bold text-foreground">María González</h2>
+                                <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground mt-2 bg-muted py-1.5 px-3 rounded-full mx-auto w-fit border border-border">
                                     <Mail className="w-3 h-3" />
                                     <span>cuellarfabian2002@gmail.com</span>
                                 </div>
-                                <div className="flex items-center justify-center text-sm text-slate-500 bg-slate-50 py-1.5 px-3 rounded-full mx-auto w-fit border border-slate-100">
+                                <div className="flex items-center justify-center text-xs mt-2 text-muted-foreground bg-muted py-1.5 px-3 rounded-full mx-auto w-fit border border-border">
                                     <span>Registro: 221110009</span>
                                 </div>
 
-                                <Badge variant="secondary" className="mt-6 bg-blue-50 text-blue-700 hover:bg-blue-100 border-blue-200 px-4 py-1">
+                                <Badge variant="secondary" className="mt-6 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800 px-4 py-1">
                                     Estudiante Activo
                                 </Badge>
                             </div>
@@ -133,7 +133,7 @@ export default function DashboardPage() {
                         {stats.map((stat, i) => (
                             <motion.div key={i} variants={itemVariants} whileHover={{ y: -5 }}>
                                 {/* AQUÍ ESTÁ EL CAMBIO: Quitamos las opacidades para que se vea el color real */}
-                                <Card className={`border shadow-sm transition-all duration-300 hover:shadow-md cursor-default ${stat.bg} ${stat.border}`}>
+                                <Card className={`bg-card border shadow-sm transition-all duration-300 hover:shadow-md cursor-default ${stat.bg} ${stat.border}`}>
                                     <CardContent className="p-5 flex flex-col items-center justify-center text-center space-y-3">
                                         {/* El círculo del icono ahora es blanco para contrastar con el fondo de color */}
                                         <div className={`p-3 rounded-full bg-white shadow-sm ring-inset ${stat.border}`}>
@@ -154,25 +154,25 @@ export default function DashboardPage() {
 
                     {/* Tabla de Notas */}
                     <motion.div variants={itemVariants}>
-                        <Card className="border shadow-sm overflow-hidden bg-white ring-1 ring-slate-900/5">
-                            <CardHeader className="bg-white border-b px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <Card className="border shadow-sm overflow-hidden bg-card ring-1 ring-border">
+                            <CardHeader className="bg-card border-b border-border px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                                 <div className="flex items-center gap-2">
-                                    <div className="bg-blue-100 p-2 rounded-lg">
-                                        <BookOpen className="h-5 w-5 text-blue-700" />
+                                    <div className="bg-blue-100 dark:bg-blue-900/50 p-2 rounded-lg">
+                                        <BookOpen className="h-5 w-5 text-blue-700 dark:text-blue-400" />
                                     </div>
                                     <div>
-                                        <CardTitle className="text-base font-bold text-slate-800">Historial de Módulos</CardTitle>
-                                        <p className="text-xs text-slate-500">Periodo Académico 2024-2025</p>
+                                        <CardTitle className="text-base font-bold text-foreground">Historial de Módulos</CardTitle>
+                                        <p className="text-xs text-muted-foreground">Periodo Académico 2024-2025</p>
                                     </div>
                                 </div>
-                                <Badge variant="outline" className="text-slate-600 font-medium border-slate-300 bg-slate-50">
+                                <Badge variant="outline" className="text-muted-foreground font-medium border-border bg-muted">
                                     Maestría en Administración (MBA)
                                 </Badge>
                             </CardHeader>
 
                             <div className="overflow-x-auto">
                                 <table className="w-full text-sm text-left">
-                                    <thead className="text-xs text-slate-500 uppercase bg-slate-50 border-b">
+                                    <thead className="text-xs text-muted-foreground uppercase bg-muted/50 border-b border-border">
                                         <tr>
                                             <th className="px-6 py-3 font-semibold">Código</th>
                                             <th className="px-6 py-3 font-semibold">Módulo</th>
@@ -182,33 +182,33 @@ export default function DashboardPage() {
                                             <th className="px-6 py-3 font-semibold text-right">Estado</th>
                                         </tr>
                                     </thead>
-                                    <tbody className="divide-y divide-slate-100">
+                                    <tbody className="divide-y divide-border">
                                         {grades.map((item, index) => (
                                             <motion.tr
                                                 key={index}
                                                 initial={{ opacity: 0 }}
                                                 animate={{ opacity: 1 }}
                                                 transition={{ delay: index * 0.05 }} // Pequeño efecto cascada en filas
-                                                className="bg-white hover:bg-blue-50/50 transition-colors group cursor-default"
+                                                className="bg-card hover:bg-muted/50 transition-colors group cursor-default"
                                             >
-                                                <td className="px-6 py-4 font-medium text-slate-700 group-hover:text-blue-700 transition-colors">{item.code}</td>
-                                                <td className="px-6 py-4 text-slate-600 font-medium">{item.module}</td>
-                                                <td className="px-6 py-4 text-slate-500 text-xs">
-                                                    <span className="bg-slate-100 px-2 py-1 rounded text-slate-600">{item.period}</span>
+                                                <td className="px-6 py-4 font-medium text-muted-foreground group-hover:text-blue-700 transition-colors">{item.code}</td>
+                                                <td className="px-6 py-4 text-muted-foreground font-medium">{item.module}</td>
+                                                <td className="px-6 py-4 text-muted-foreground text-xs">
+                                                    <span className="bg-muted px-2 py-1 rounded text-foreground">{item.period}</span>
                                                 </td>
-                                                <td className="px-6 py-4 text-slate-500 text-center">{item.credits}</td>
+                                                <td className="px-6 py-4 text-muted-foreground text-center">{item.credits}</td>
                                                 <td className={`px-6 py-4 font-bold text-center text-base ${typeof item.grade === 'number'
-                                                    ? (item.grade >= 51 ? "text-slate-700" : "text-red-600")
-                                                    : "text-slate-400"
+                                                    ? (item.grade >= 51 ? "text-foreground" : "text-red-600 dark:text-red-400")
+                                                    : "text-muted-foreground"
                                                     }`}>
                                                     {item.grade}
                                                 </td>
                                                 <td className="px-6 py-4 text-right">
                                                     <Badge className={`
                                                 font-normal border shadow-none
-                                                ${item.status === 'Aprobado' ? 'bg-green-100 text-green-700 hover:bg-green-100 border-green-200' : ''}
-                                                ${item.status === 'Reprobado' ? 'bg-red-100 text-red-700 hover:bg-red-100 border-red-200' : ''}
-                                                ${item.status === 'Cursando' ? 'bg-blue-100 text-blue-700 hover:bg-blue-100 border-blue-200' : ''}
+                                                ${item.status === 'Aprobado' ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-30 border-green-200 dark:border-green-800' : ''}
+                                                ${item.status === 'Reprobado' ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 border-red-200 dark:border-red-800' : ''}
+                                                ${item.status === 'Cursando' ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800' : ''}
                                             `}>
                                                         {item.status}
                                                     </Badge>
@@ -219,8 +219,8 @@ export default function DashboardPage() {
                                 </table>
                             </div>
                             {/* Pagination dummy footer */}
-                            <div className="bg-slate-50 px-6 py-3 border-t flex justify-end">
-                                <button className="text-xs font-medium text-blue-700 flex items-center hover:underline">
+                            <div className="bg-muted/30 px-6 py-3 border-t border-border flex justify-end">
+                                <button className="text-xs font-medium text-blue-600 dark:text-blue-400 flex items-center hover:underline">
                                     Ver historial completo <ChevronRight className="h-3 w-3 ml-1" />
                                 </button>
                             </div>

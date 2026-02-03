@@ -7,8 +7,8 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-slate-50">
-      
+    <div className="flex min-h-screen w-full flex-col bg-slate-50 dark:bg-slate-950">
+
       {/* 1. BARRA SUPERIOR FIJA */}
       <Navbar />
 
@@ -29,7 +29,7 @@ export default function DashboardLayout({
       </main>
       
       {/* Footer simple */}
-      <footer className="py-6 text-center text-xs text-slate-400">
+      <footer className="py-6 text-center text-xs text-slate-400 dark:text-slate-600">
         © 2026 Universidad Autónoma Gabriel René Moreno
       </footer>
     </div>

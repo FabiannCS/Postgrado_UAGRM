@@ -3,15 +3,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { 
-  BookOpen, 
-  Calendar, 
-  GraduationCap, 
-  LayoutDashboard, 
-  Users, 
-  RefreshCcw, 
+import {
+  BookOpen,
+  Calendar,
+  GraduationCap,
+  LayoutDashboard,
+  Users,
+  RefreshCcw,
   LogOut,
-  
+
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -29,14 +29,14 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="flex h-full flex-col bg-slate-900 text-white">
+    <div className="flex h-full flex-col bg-card text-card-foreground border-r border-border">
       {/* 1. Header del Sidebar (Logo) */}
-      <div className="flex h-16 items-center border-b border-slate-800 px-6">
+      <div className="flex h-16 items-center border-b border-border px-6">
         <div className="flex items-center gap-2 font-bold text-lg tracking-wide">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <span className="text-sm">U</span>
           </div>
-          <span className="text-slate-100">Postgrado</span>
+          <span className="text-foreground">Postgrado</span>
         </div>
       </div>
 
@@ -52,11 +52,11 @@ export function Sidebar() {
                 className={cn(
                   "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200",
                   isActive
-                    ? "bg-blue-700 text-white shadow-md shadow-blue-900/20" // Estilo Activo
-                    : "text-slate-400 hover:bg-slate-800 hover:text-slate-100" // Estilo Inactivo
+                    ? "bg-primary text-primary-foreground shadow-md shadow-primary/20" // Estilo Activo
+                    : "text-muted-foreground hover:bg-muted hover:text-foreground" // Estilo Inactivo
                 )}
               >
-                <item.icon className={cn("h-4 w-4", isActive ? "text-blue-200" : "text-slate-500")} />
+                <item.icon className={cn("h-4 w-4", isActive ? "text-primary-foreground" : "text-muted-foreground")} />
                 {item.label}
               </Link>
             );
@@ -65,22 +65,22 @@ export function Sidebar() {
       </div>
 
       {/* 3. Footer del Sidebar (Perfil resumido y Salir) */}
-      <div className="border-t border-slate-800 p-4">
+      <div className="border-t border-border p-4">
         <div className="flex items-center gap-3 mb-4 px-2">
-            <div className="h-8 w-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-200 text-xs font-bold border border-blue-500/30">
-                MG
-            </div>
-            <div className="flex flex-col overflow-hidden">
-                <span className="truncate text-sm font-medium text-slate-200">María González</span>
-                <span className="truncate text-xs text-slate-500">219004589</span>
-            </div>
+          <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-bold border border-primary/20">
+            MG
+          </div>
+          <div className="flex flex-col overflow-hidden">
+            <span className="truncate text-sm font-medium text-foreground">María González</span>
+            <span className="truncate text-xs text-muted-foreground">219004589</span>
+          </div>
         </div>
-        
-        <Button variant="ghost" className="w-full justify-start text-red-400 hover:text-red-300 hover:bg-red-950/30" asChild>
-            <Link href="/login">
-                <LogOut className="mr-2 h-4 w-4" />
-                Cerrar Sesión
-            </Link>
+
+        <Button variant="ghost" className="w-full justify-start text-red-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-950/30" asChild>
+          <Link href="/login">
+            <LogOut className="mr-2 h-4 w-4" />
+            Cerrar Sesión
+          </Link>
         </Button>
       </div>
     </div>
