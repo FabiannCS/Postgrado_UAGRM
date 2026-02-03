@@ -197,10 +197,11 @@ export default function DashboardPage() {
                                                     <span className="bg-muted px-2 py-1 rounded text-foreground">{item.period}</span>
                                                 </td>
                                                 <td className="px-6 py-4 text-muted-foreground text-center">{item.credits}</td>
-                                                <td className={`px-6 py-4 font-bold text-center text-base ${typeof item.grade === 'number'
-                                                    ? (item.grade >= 51 ? "text-foreground" : "text-red-600 dark:text-red-400")
-                                                    : "text-muted-foreground"
-                                                    }`}>
+                                                <td className={`px-6 py-4 font-bold text-center text-base 
+                                                    ${item.status === 'Aprobado' ? "text-green-700 dark:text-green-400" : ""}
+                                                    ${item.status === 'Reprobado' ? "text-red-700 dark:text-red-400" : ""}
+                                                    ${item.status === 'Cursando' ? "text-blue-700 dark:text-blue-400" : ""}
+                                                    `}>
                                                     {item.grade}
                                                 </td>
                                                 <td className="px-6 py-4 text-right">
