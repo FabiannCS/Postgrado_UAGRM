@@ -14,6 +14,7 @@ import {
 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 // Definimos las rutas del menú
 const menuItems = [
@@ -33,8 +34,14 @@ export function Sidebar() {
       {/* 1. Header del Sidebar (Logo) */}
       <div className="flex h-16 items-center border-b border-border px-6">
         <div className="flex items-center gap-2 font-bold text-lg tracking-wide">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <span className="text-sm">U</span>
+          <div className="flex h-8 w-8 items-center justify-center">
+            <Image
+              src="/Autonomous_University_Gabriel_Rene_Moreno_Logo.svg.png"
+              alt="Logo UAGRM"
+              width={32}
+              height={32}
+              className="h-full w-full object-contain"
+            />
           </div>
           <span className="text-foreground">Postgrado</span>
         </div>
@@ -52,7 +59,7 @@ export function Sidebar() {
                 className={cn(
                   "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200",
                   isActive
-                    ? "bg-primary text-primary-foreground shadow-md shadow-primary/20" // Estilo Activo
+                    ? "bg-uagrm-blue text-white shadow-md shadow-uagrm-blue/20" // Estilo Activo
                     : "text-muted-foreground hover:bg-muted hover:text-foreground" // Estilo Inactivo
                 )}
               >
@@ -76,7 +83,7 @@ export function Sidebar() {
           </div>
         </div>
 
-        <Button variant="ghost" className="w-full justify-start text-red-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-950/30" asChild>
+        <Button variant="ghost" className="w-full justify-start text-uagrm-red hover:text-uagrm-red hover:bg-red-50 dark:hover:bg-red-950/30" asChild>
           <Link href="/login">
             <LogOut className="mr-2 h-4 w-4" />
             Cerrar Sesión

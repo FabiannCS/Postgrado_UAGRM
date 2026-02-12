@@ -28,16 +28,22 @@ export function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-30 flex h-16 w-full items-center justify-between border-b bg-background/80 px-4 backdrop-blur-md md:px-6 border-border">
+      <header className="sticky top-0 z-30 flex h-16 w-full items-center justify-between border-b bg-uagrm-blue px-4 backdrop-blur-md md:px-6 border-white/10 shadow-sm text-white">
 
         {/* LADO IZQUIERDO */}
         <div className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm">
-            <GraduationCap className="h-5 w-5" />
+          <div className="flex h-10 w-10 items-center justify-center bg-white rounded-lg p-1 shadow-sm">
+            <NextImage
+              src="/Autonomous_University_Gabriel_Rene_Moreno_Logo.svg.png"
+              alt="Logo UAGRM"
+              width={40}
+              height={40}
+              className="h-full w-full object-contain"
+            />
           </div>
           <div className="flex flex-col">
-            <span className="text-sm font-bold leading-none text-foreground md:text-base">Portal Postgrado</span>
-            <span className="text-[10px] text-muted-foreground font-medium">U.A.G.R.M.</span>
+            <span className="text-sm font-bold leading-none text-white md:text-base">Portal Postgrado</span>
+            <span className="text-[10px] text-blue-200 font-medium">U.A.G.R.M.</span>
           </div>
         </div>
 
@@ -47,8 +53,8 @@ export function Navbar() {
           <ModeToggle />
 
           <div className="hidden md:flex flex-col items-end mr-1">
-            <span className="text-sm font-medium text-foreground">María González</span>
-            <span className="text-[10px] text-muted-foreground">Reg: 219004589</span>
+            <span className="text-sm font-medium text-white">María González</span>
+            <span className="text-[10px] text-blue-200">Reg: 219004589</span>
           </div>
 
           <DropdownMenu>
@@ -76,7 +82,7 @@ export function Navbar() {
                 <span>Mi Perfil</span>
               </DropdownMenuItem>
 
-              <DropdownMenuItem className="text-red-600 focus:text-red-600 focus:bg-red-50 dark:focus:bg-red-950 cursor-pointer">
+              <DropdownMenuItem className="text-uagrm-red focus:text-uagrm-red focus:bg-red-50 dark:focus:bg-red-950 cursor-pointer">
                 <Link href="/login" className="flex items-center w-full">
                   <LogOut className="mr-2 h-4 w-4" />
                   <span>Cerrar Sesión</span>
@@ -112,10 +118,11 @@ export function Navbar() {
               <DialogDescription className="text-blue-100 dark:text-primary-foreground/80">
                 Estudiante de Postgrado
               </DialogDescription>
-              <Badge className="mt-2 bg-blue-700 dark:bg-blue-500 hover:bg-blue-600 text-white border-none">
+              <Badge className="mt-2 bg-uagrm-blue dark:bg-uagrm-blue/80 hover:bg-uagrm-blue/90 text-white border-none">
                 Activo
               </Badge>
             </div>
+
           </div>
 
           {/* Contenido */}
@@ -158,7 +165,7 @@ export function Navbar() {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-card p-3 rounded-lg border border-border text-center">
                 <span className="block text-xs text-muted-foreground uppercase font-semibold mb-1">Promedio</span>
-                <span className="text-xl font-bold text-blue-700 dark:text-blue-400">87.50</span>
+                <span className="text-xl font-bold text-uagrm-blue dark:text-blue-400">87.50</span>
               </div>
               <div className="bg-card p-3 rounded-lg border border-border text-center">
                 <span className="block text-xs text-muted-foreground uppercase font-semibold mb-1">Avance</span>

@@ -39,7 +39,7 @@ export default function LoginPage() {
                 {/* SECCIÓN 1: LADO IZQUIERDO (Visual / Branding UAGRM) 
             CAMBIO: order-2 (abajo en móvil), md:order-1 (izquierda en PC)
         */}
-                <div className="relative flex flex-col justify-between p-8 md:p-10 text-white bg-blue-900 dark:bg-slate-900 overflow-hidden order-2 md:order-1 min-h-[200px]">
+                <div className="relative flex flex-col justify-between p-8 md:p-10 text-white bg-uagrm-blue dark:bg-slate-900 overflow-hidden order-2 md:order-1 min-h-[200px]">
 
                     {/* Imagen de Fondo */}
                     <div className="absolute inset-0 z-0">
@@ -53,7 +53,7 @@ export default function LoginPage() {
                     </div>
 
                     {/* Overlay Gradiente */}
-                    <div className="absolute inset-0 z-0 bg-linear-to-br from-blue-950/90 via-blue-900/80 to-red-900/80 mix-blend-multiply" />
+                    <div className="absolute inset-0 z-0 bg-uagrm-blue/90 mix-blend-multiply" />
 
                     {/* Contenido (Solo visible completamente en pantallas medianas hacia arriba para no saturar el móvil) */}
                     <div className="relative z-10 flex flex-col h-full justify-between">
@@ -78,7 +78,7 @@ export default function LoginPage() {
                                 <p className="font-semibold text-white/90">Universidad Autónoma</p>
                                 <p>Gabriel René Moreno</p>
                             </div>
-                            <div className="h-1 w-12 bg-red-600/90 rounded-full shadow-lg"></div>
+                            <div className="h-1 w-12 bg-uagrm-red/90 rounded-full shadow-lg"></div>
                         </div>
                     </div>
                 </div>
@@ -139,7 +139,7 @@ export default function LoginPage() {
 
                         <Button
                             type="submit"
-                            className="w-full h-11 mt-4 bg-primary hover:bg-primary/90 dark:bg-blue-600 dark:hover:bg-blue-500 text-primary-foreground font-medium shadow-lg shadow-primary/20 transition-all active:scale-[0.98]"
+                            className="w-full h-11 mt-4 bg-primary hover:bg-primary/90 dark:bg-uagrm-blue dark:hover:bg-uagrm-blue/90 text-primary-foreground font-medium shadow-lg shadow-primary/20 transition-all active:scale-[0.98]"
                             disabled={isLoading}
                         >
                             {isLoading ? (

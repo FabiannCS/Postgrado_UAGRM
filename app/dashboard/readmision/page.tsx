@@ -74,7 +74,7 @@ export default function ReadmisionPage() {
             {/* 2. PERIODOS DISPONIBLES */}
             <div className="space-y-4">
                 <div className="flex items-center gap-2">
-                    <Calendar className="h-5 w-5 text-blue-700 dark:text-blue-400" />
+                    <Calendar className="h-5 w-5 text-uagrm-blue dark:text-blue-400" />
                     <h2 className="text-xl font-bold text-foreground">Periodos Disponibles</h2>
                 </div>
 
@@ -110,29 +110,29 @@ export default function ReadmisionPage() {
 
                     {/* Periodo ACTIVO (PRÓXIMO) - Destacado */}
                     <motion.div variants={itemVariants} className="relative transform md:-translate-y-2">
-                        <div className="absolute top-0 left-0 w-full h-1 bg-blue-600 rounded-t-xl"></div>
-                        <Card className="h-full shadow-lg border-blue-200 dark:border-blue-800 bg-card ring-1 ring-blue-100 dark:ring-blue-900/30">
+                        <div className="absolute top-0 left-0 w-full h-1 bg-uagrm-blue rounded-t-xl"></div>
+                        <Card className="h-full shadow-lg border-uagrm-blue/20 dark:border-blue-800 bg-card ring-1 ring-uagrm-blue/10 dark:ring-uagrm-blue/30">
                             <CardHeader className="pb-3">
                                 <div className="flex justify-between items-center mb-2">
-                                    <Badge className="bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800 hover:bg-blue-100">2025-II</Badge>
+                                    <Badge className="bg-uagrm-blue/10 dark:bg-uagrm-blue/40 text-uagrm-blue dark:text-blue-300 border-uagrm-blue/20 dark:border-blue-800 hover:bg-uagrm-blue/20">2025-II</Badge>
                                     <Badge className="bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 border-green-200 dark:border-green-800 hover:bg-green-100 animate-pulse">Próximo</Badge>
                                 </div>
-                                <CardTitle className="text-blue-900 dark:text-blue-400 text-xl">Inscripciones Abiertas</CardTitle>
+                                <CardTitle className="text-uagrm-blue dark:text-blue-400 text-xl">Inscripciones Abiertas</CardTitle>
                                 <CardDescription className="text-muted-foreground">Postula para el reingreso ahora.</CardDescription>
                             </CardHeader>
                             <CardContent className="space-y-5">
-                                <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg space-y-2 text-sm border border-blue-100 dark:border-blue-900/30">
+                                <div className="bg-uagrm-blue/5 dark:bg-uagrm-blue/20 p-4 rounded-lg space-y-2 text-sm border border-uagrm-blue/10 dark:border-uagrm-blue/30">
                                     <div className="flex justify-between items-center">
-                                        <span className="text-blue-600 dark:text-blue-400 font-medium">Inicio</span>
+                                        <span className="text-uagrm-blue dark:text-blue-400 font-medium">Inicio</span>
                                         <span className="font-bold text-foreground">01 Jun, 2025</span>
                                     </div>
-                                    <Separator className="bg-blue-200 dark:bg-blue-800" />
+                                    <Separator className="bg-uagrm-blue/20 dark:bg-blue-800" />
                                     <div className="flex justify-between items-center">
-                                        <span className="text-blue-600 dark:text-blue-400 font-medium">Fin</span>
+                                        <span className="text-uagrm-blue dark:text-blue-400 font-medium">Fin</span>
                                         <span className="font-bold text-foreground">31 Jul, 2025</span>
                                     </div>
                                 </div>
-                                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-200 dark:shadow-none h-11 text-base">
+                                <Button className="w-full bg-uagrm-blue hover:bg-uagrm-blue/90 text-white shadow-md shadow-uagrm-blue/20 dark:shadow-none h-11 text-base">
                                     Solicitar Readmisión <ArrowRight className="ml-2 h-4 w-4" />
                                 </Button>
                             </CardContent>
@@ -190,8 +190,8 @@ export default function ReadmisionPage() {
                                     "Declaración jurada de motivos de abandono"
                                 ].map((req, i) => (
                                     <li key={i} className="flex items-start gap-3">
-                                        <div className="mt-0.5 bg-blue-50 dark:bg-blue-900/30 p-1 rounded-full">
-                                            <CheckCircle2 className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                                        <div className="mt-0.5 bg-uagrm-blue/10 dark:bg-uagrm-blue/30 p-1 rounded-full">
+                                            <CheckCircle2 className="h-4 w-4 text-uagrm-blue dark:text-blue-400" />
                                         </div>
                                         <span className="text-sm text-muted-foreground leading-tight">{req}</span>
                                     </li>
@@ -238,7 +238,7 @@ export default function ReadmisionPage() {
                     <CardContent className="p-8 flex flex-col md:flex-row items-center justify-between gap-6">
                         <div className="flex items-start gap-4">
                             <div className="bg-white/10 p-3 rounded-lg backdrop-blur-sm">
-                                <HelpCircle className="h-8 w-8 text-blue-200" />
+                                <HelpCircle className="h-8 w-8 text-white" />
                             </div>
                             <div className="space-y-1">
                                 <h3 className="text-lg font-bold">¿Necesitas Ayuda con el trámite?</h3>
@@ -252,7 +252,7 @@ export default function ReadmisionPage() {
 
                             {/* EMAIL */}
                             <a href="mailto:admisiones.postgrado@universidad.edu" className="flex items-center gap-3 text-sm bg-white/5 p-3 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
-                                <Mail className="h-4 w-4 text-blue-300 shrink-0" />
+                                <Mail className="h-4 w-4 text-white shrink-0" />
                                 <span className="truncate">admisiones.postgrado@universidad.edu</span>
                             </a>
 

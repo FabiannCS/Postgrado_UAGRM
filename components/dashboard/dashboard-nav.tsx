@@ -30,14 +30,14 @@ export function DashboardNav() {
               className={cn(
                 "relative px-4 py-2 text-sm font-medium transition-colors rounded-full whitespace-nowrap",
                 isActive
-                  ? "text-blue-700 dark:text-blue-400"
+                  ? "text-uagrm-blue dark:text-blue-400"
                   : "text-muted-foreground hover:text-foreground hover:bg-muted"
               )}
             >
               {isActive && (
                 <motion.div
                   layoutId="active-pill"
-                  className="absolute inset-0 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-full"
+                  className="absolute inset-0 bg-uagrm-blue/10 dark:bg-uagrm-blue/30 border border-uagrm-blue/20 dark:border-blue-800 rounded-full"
                   style={{ borderRadius: 9999 }}
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />
