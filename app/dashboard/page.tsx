@@ -5,7 +5,8 @@ import NextImage from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, XCircle, Clock, Award, Mail, ChevronRight, BookOpen } from "lucide-react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import { containerVariants, itemVariants } from "@/lib/animations";
 
 // Datos de ejemplo
 const stats = [
@@ -51,21 +52,7 @@ const grades = [
     { code: "MBA-202", module: "Liderazgo Organizacional", period: "2025-I", credits: 3, grade: "-", status: "Cursando" },
 ];
 
-// Configuración de animaciones (Variantes)
-const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    show: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.1 // Retraso entre cada elemento
-        }
-    }
-};
 
-const itemVariants: Variants = {
-    hidden: { y: 20, opacity: 0 },
-    show: { y: 0, opacity: 1, transition: { type: "spring", bounce: 0.3 } }
-};
 
 export default function DashboardPage() {
     return (
