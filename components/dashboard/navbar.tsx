@@ -61,7 +61,7 @@ export function Navbar() {
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="relative h-10 w-10 rounded-full ring-2 ring-border hover:ring-primary/20 p-0">
                 <Avatar className="h-10 w-10">
-                  <AvatarImage src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="@usuario" />
+                  <AvatarImage src="https://github.com/shadcn.png" alt="@usuario" />
                   <AvatarFallback className="bg-primary/10 text-primary font-bold">MG</AvatarFallback>
                 </Avatar>
               </Button>

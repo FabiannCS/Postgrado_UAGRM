@@ -6,11 +6,10 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 const items = [
-  { href: "/dashboard", title: "Mis Notas" },
-  { href: "/dashboard/modulos", title: "Módulos Inscritos" },
+  { href: "/dashboard", title: "Mi Perfil" },
+  { href: "/dashboard/programas", title: "Mis Programas" },
   { href: "/dashboard/horarios", title: "Horarios" },
   { href: "/dashboard/docentes", title: "Mis Docentes" },
-  { href: "/dashboard/programas", title: "Programas" },
   { href: "/dashboard/readmision", title: "Readmisión" },
 ];
 
