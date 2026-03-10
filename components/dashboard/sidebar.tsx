@@ -9,7 +9,7 @@ import {
   GraduationCap,
   LayoutDashboard,
   Users,
-  RefreshCcw,
+  LifeBuoy,
   LogOut,
 
 } from "lucide-react";
@@ -23,7 +23,7 @@ const menuItems = [
   { href: "/dashboard/horarios", label: "Horarios", icon: Calendar },
   { href: "/dashboard/docentes", label: "Mis Docentes", icon: Users },
   { href: "/dashboard/programas", label: "Programas de Formación", icon: GraduationCap },
-  { href: "/dashboard/readmision", label: "Readmisión", icon: RefreshCcw },
+  { href: "/dashboard/ayuda", label: "Ayuda", icon: LifeBuoy },
 ];
 
 export function Sidebar() {

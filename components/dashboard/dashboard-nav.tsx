@@ -9,8 +9,8 @@ const items = [
   { href: "/dashboard", title: "Mi Perfil" },
   { href: "/dashboard/programas", title: "Mis Programas" },
   { href: "/dashboard/horarios", title: "Horarios" },
-  { href: "/dashboard/docentes", title: "Mis Docentes" },
-  { href: "/dashboard/readmision", title: "Readmisión" },
+  { href: "/dashboard/historico", title: "Histórico Académico" },
+  { href: "/dashboard/ayuda", title: "Ayuda" },
 ];
 
 export function DashboardNav() {

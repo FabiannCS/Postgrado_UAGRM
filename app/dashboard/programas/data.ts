@@ -38,23 +38,6 @@ export const programsData: Program[] = [
     theme: "uagrm-blue"
   },
   {
-    id: 2,
-    type: "Diplomado",
-    name: "Diplomado en Marketing Digital",
-    code: "DMD",
-    status: "Por Iniciar",
-    description: "Especialización intensiva en herramientas digitales, SEO, SEM y estrategias de social media marketing.",
-    startDate: "20 de Abril 2026",
-    endDate: "20 de Agosto 2026",
-    period: "2026-II",
-    progress: 0,
-    creditsCompleted: 0,
-    totalCredits: 20,
-    coordinator: "Msc. Laura Paredes",
-    coordinatorEmail: "dmd@uagrm.edu.bo",
-    theme: "uagrm-red"
-  },
-  {
     id: 3,
     type: "Especialidad",
     name: "Especialidad en Finanzas Corporativas",
@@ -73,58 +56,41 @@ export const programsData: Program[] = [
   }
 ];
 
-// 1. Módulos que pertenecen a un programa específico
-// app/dashboard/programas/data.ts
-
 export const programModules = [
   // --- MÓDULOS DEL PROGRAMA 1 (MBA) ---
   {
     id: 101, programId: 1, name: "Gestión Estratégica", sigla: "ADM-501", estado: "Aprobado", nota: 90,
-    credits: 4, hours: 64, period: "2024-I", teacher: "Dr. Roberto Silva", modality: "Presencial",
-    horas: "Mar a Mie: 19:00 - 22:00",
+    credits: 4, hours: 64, period: "I-2024", teacher: "Dr. Roberto Silva", modality: "Presencial",
+    horas: "Mar a Mie: 19:00 - 22:00", duracion: "2 meses",
     description: "Análisis del entorno competitivo y formulación de estrategias a nivel corporativo.",
     resources: [{ title: "Sílabo y Plan de Clases", type: "pdf" }, { title: "Proyecto Final Evaluado", type: "file" }]
   },
   {
     id: 102, programId: 1, name: "Marketing Corporativo", sigla: "MKT-502", estado: "Aprobado", nota: 85,
-    credits: 4, hours: 64, period: "2024-I", teacher: "Msc. Carla Montaño", modality: "Virtual",
-    horas: "Sab a Jue de 19:00 a 22:00",
+    credits: 4, hours: 64, period: "I-2024", teacher: "Msc. Carla Montaño", modality: "Virtual",
+    horas: "Sab a Jue de 19:00 a 22:00", duracion: "2 meses",
     description: "Desarrollo de estrategias de marketing integral y posicionamiento de marca.",
     resources: [{ title: "Material de Lectura", type: "pdf" }]
   },
   {
-    id: 103, programId: 1, name: "Finanzas I", sigla: "FIN-503", estado: "Cursando", nota: 0,
-    credits: 5, hours: 80, period: "2024-II", teacher: "Dr. Carlos Ruiz", modality: "Presencial",
-    horas: "Lun a Vie de 19:00 a 22:00",
+    id: 103, programId: 1, name: "Finanzas I", sigla: "FIN-503", estado: "Inscritos", nota: 0,
+    credits: 5, hours: 80, period: "II-2024", teacher: "Dr. Carlos Ruiz", modality: "Presencial",
+    horas: "Lun a Vie de 19:00 a 22:00", duracion: "3 meses",
     description: "Análisis de estados financieros, flujos de caja y matemáticas financieras.",
     resources: [{ title: "Unidad 1: Introducción", type: "pdf" }, { title: "Grabación Clase 1", type: "video" }]
   },
   {
     id: 104, programId: 1, name: "Taller de Grado", sigla: "TES-600", estado: "Pendiente", nota: 0,
-    credits: 10, hours: 160, period: "2025-II", teacher: "Por asignar", modality: "Presencial",
-    horas: "Sábados de 08:00 a 12:00",
+    credits: 10, hours: 160, period: "II-2025", teacher: "Por asignar", modality: "Presencial",
+    horas: "Sábados de 08:00 a 12:00", duracion: "6 meses",
     description: "Desarrollo del trabajo final de grado bajo tutoría especializada.",
     resources: []
   },
-
-  // --- MÓDULOS DEL PROGRAMA 2 (Diplomado DMD) ---
-  {
-    id: 201, programId: 2, name: "SEO Avanzado", sigla: "SEO-101", estado: "Pendiente", nota: 0,
-    credits: 3, hours: 48, period: "2026-II", teacher: "Lic. Pedro Gomez", modality: "Virtual",
-    description: "Técnicas avanzadas de posicionamiento en motores de búsqueda.",
-    resources: []
-  },
-  {
-    id: 202, programId: 2, name: "Social Media Ads", sigla: "SMA-102", estado: "Pendiente", nota: 0,
-    credits: 3, hours: 48, period: "2026-II", teacher: "Msc. Laura Paredes", modality: "Virtual",
-    description: "Creación y optimización de campañas en Facebook, Instagram y LinkedIn.",
-    resources: []
-  },
-
   // --- MÓDULOS DEL PROGRAMA 3 (Especialidad EFC) ---
   {
     id: 301, programId: 3, name: "Análisis Bursátil", sigla: "BUR-300", estado: "Aprobado", nota: 95,
-    credits: 5, hours: 80, period: "2024-I", teacher: "Dr. Carlos Ruiz", modality: "Presencial",
+    credits: 5, hours: 80, period: "I-2025", teacher: "Dr. Carlos Ruiz", modality: "Presencial",
+    duracion: "2 meses",
     description: "Estudio de los mercados de valores y análisis técnico de acciones.",
     resources: [{ title: "Certificado de Aprobación", type: "pdf" }]
   },
@@ -135,6 +101,6 @@ export const programTeachers = [
   { programId: 1, name: "Dr. Roberto Silva", materia: "Gestión Estratégica", email: "r.silva@uagrm.edu.bo", number: "78090020" },
   { programId: 1, name: "Msc. Carla Montaño", materia: "Marketing Corporativo", email: "c.montano@uagrm.edu.bo", number: "78090020" },
 
-  { programId: 2, name: "Lic. Pedro Gomez", materia: "SEO Avanzado", email: "p.gomez@uagrm.edu.bo", number: "78090020" },
-  { programId: 2, name: "Ing. Juan Antonio", materia: "Bases de datos", email: "juan_antonio@uagrm.edu.bo", number: "78090020" }
+  { programId: 3, name: "Lic. Pedro Gomez", materia: "SEO Avanzado", email: "p.gomez@uagrm.edu.bo", number: "78090020" },
+  { programId: 3, name: "Ing. Juan Antonio", materia: "Bases de datos", email: "juan_antonio@uagrm.edu.bo", number: "78090020" }
 ];

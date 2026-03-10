@@ -1,109 +1,55 @@
-export interface ClassSession {
-    program: string;
-    programColor: 'blue' | 'red';
-    subject: string;
-    time: string;
-    room: string;
-    modality: 'Presencial' | 'Virtual' | 'Seminario';
-}
+// app/dashboard/horarios/data.ts
 
-export interface WeeklyScheduleItem {
-    day: string;
-    classes: ClassSession[];
-}
+export const scheduleData = {
+    // El módulo que el estudiante está cursando AHORA
+    currentModule: {
+        id: 1,
+        program: "Maestría en Administración de Empresas",
+        name: "Finanzas Corporativas Avanzadas",
+        code: "FIN-503",
+        teacher: "Dr. Carlos Ruiz",
+        startDate: "04 de Marzo, 2026",
+        endDate: "28 de Marzo, 2026",
+        scheduleRule: "Martes y Jueves • 19:00 - 22:00",
+        modality: "Híbrido", // Presencial y Virtual
+        credits: 4,
+    },
+    
+    // Las clases exactas más próximas (Agenda)
+    upcomingSessions: [
+        {
+            id: 101,
+            date: "Martes, 10 de Marzo",
+            time: "19:00 - 22:00",
+            type: "Clase Teórica",
+            location: "Aula 214 - Edificio Postgrado",
+            isVirtual: false,
+            isToday: true, // Para resaltarlo
+        },
+        {
+            id: 102,
+            date: "Jueves, 12 de Marzo",
+            time: "19:00 - 22:00",
+            type: "Análisis de Casos",
+            location: "Sala Virtual (Zoom)",
+            isVirtual: true,
+            isToday: false,
+        },
+        {
+            id: 103,
+            date: "Martes, 17 de Marzo",
+            time: "19:00 - 22:00",
+            type: "Evaluación Parcial",
+            location: "Aula 214 - Edificio Postgrado",
+            isVirtual: false,
+            isToday: false,
+        }
+    ],
 
-export const weeklySchedule: WeeklyScheduleItem[] = [
-    {
-        day: "Lunes",
-        classes: [
-            {
-                program: "MBA",
-                programColor: "blue",
-                subject: "Gestión Estratégica",
-                time: "19:00 - 22:00",
-                room: "Aula 301",
-                modality: "Presencial"
-            },
-            {
-                program: "DMD",
-                programColor: "red",
-                subject: "Marketing Digital",
-                time: "19:00 - 22:00",
-                room: "Aula 302",
-                modality: "Presencial"
-            },
-            {
-                program: "DMD",
-                programColor: "red",
-                subject: "Taller de Marca Personal",
-                time: "18:30 - 22:30",
-                room: "Virtual",
-                modality: "Virtual"
-            }
-        ]
-    },
-    {
-        day: "Martes",
-        classes: [
-            {
-                program: "DMD",
-                programColor: "red",
-                subject: "Estrategias SEO",
-                time: "18:30 - 21:30",
-                room: "Lab. Cómputo 2",
-                modality: "Presencial"
-            }
-        ]
-    },
-    {
-        day: "Miércoles",
-        classes: [
-            {
-                program: "MBA",
-                programColor: "blue",
-                subject: "Gestión Estratégica",
-                time: "19:00 - 22:00",
-                room: "Virtual",
-                modality: "Virtual"
-            }
-        ]
-    },
-    {
-        day: "Jueves",
-        classes: [
-            {
-                program: "DMD",
-                programColor: "red",
-                subject: "Estrategias SEO",
-                time: "18:30 - 21:30",
-                room: "Lab. Cómputo 2",
-                modality: "Presencial"
-            },
-            {
-                program: "DMD",
-                programColor: "red",
-                subject: "Taller de Marca Personal",
-                time: "18:30 - 22:30",
-                room: "Aula 301",
-                modality: "Presencial"
-            }
-        ]
-    },
-    {
-        day: "Viernes",
-        classes: [] // Día libre
-    },
-    {
-        day: "Sábado",
-        classes: [
-            {
-                program: "MBA",
-                programColor: "blue",
-                subject: "Taller de Habilidades Directivas",
-                time: "08:00 - 13:00",
-                room: "Auditorio Principal",
-                modality: "Seminario"
-            }
-        ]
-    },
-];
+    // El módulo que viene el próximo mes
+    nextModule: {
+        name: "Gestión del Talento Humano",
+        startDate: "02 de Abril, 2026",
+        teacher: "Msc. Laura Paredes"
+    }
+};

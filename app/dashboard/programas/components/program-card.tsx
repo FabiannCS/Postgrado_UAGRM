@@ -31,7 +31,7 @@ export function ProgramCard({ program, onViewDetails }: ProgramCardProps) {
             <CardHeader className="flex flex-row items-start justify-between space-y-0 pb-2">
                 <div className="flex items-start gap-4">
                     <div className={`p-2.5 rounded-xl shadow-sm ${program.status === 'Completado' ? 'bg-emerald-100 text-emerald-600 dark:bg-emerald-900/20' :
-                            program.theme === 'uagrm-red' ? 'bg-orange-100 text-uagrm-red dark:bg-orange-900/20' :
+                            program.theme === 'uagrm-red' ? 'bg-red-100 text-uagrm-red dark:bg-orange-900/20' :
                                 'bg-blue-100 text-uagrm-blue dark:bg-blue-900/20'
                         }`}>
                         <GraduationCap className="h-6 w-6" />
@@ -44,7 +44,7 @@ export function ProgramCard({ program, onViewDetails }: ProgramCardProps) {
                             </Badge>
                             <Badge className={`${program.status === 'Activo' ? 'bg-blue-100 text-blue-700 hover:bg-blue-200 dark:bg-blue-900/30 dark:text-blue-300' :
                                     program.status === 'Completado' ? 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-300' :
-                                        'bg-orange-100 text-uagrm-red hover:bg-orange-200 dark:bg-orange-900/30 dark:text-orange-300'
+                                        'bg-red-100 text-uagrm-red hover:bg-orange-200 dark:bg-orange-900/30 dark:text-orange-300'
                                 } border-none`}>
                                 {program.status}
                             </Badge>
@@ -54,9 +54,6 @@ export function ProgramCard({ program, onViewDetails }: ProgramCardProps) {
             </CardHeader>
 
             <CardContent className="space-y-4 flex-1 pt-2">
-                <p className="text-sm text-muted-foreground line-clamp-2 leading-relaxed">
-                    {program.description}
-                </p>
 
                 <Separator />
 
@@ -105,7 +102,7 @@ export function ProgramCard({ program, onViewDetails }: ProgramCardProps) {
                 >
                     <span className="flex items-center gap-2 text-sm font-medium">
                         <BookOpen className="h-4 w-4 text-muted-foreground group-hover:text-foreground" />
-                        Más Información
+                        Ver Programa
                     </span>
                     <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:translate-x-1 transition-transform" />
                 </Button>

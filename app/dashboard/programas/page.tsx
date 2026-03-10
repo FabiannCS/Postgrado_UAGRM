@@ -38,7 +38,7 @@ export default function ProgramasPage() {
     : programsData.filter(p => p.status.trim() === filter);
   // .trim() ayuda si hay espacios accidentales en data.ts
 
-  const filterOptions: (ProgramStatus | "Todos")[] = ["Todos", "Activo", "Por Iniciar", "Completado"];
+  const filterOptions: (ProgramStatus | "Todos")[] = ["Todos", "Activo", "Completado"];
 
   // Cálculo de resumen
   const summary = {
@@ -62,39 +62,35 @@ export default function ProgramasPage() {
     >
       <div className="flex flex-col gap-1">
         <h1 className="text-2xl font-bold tracking-tight text-foreground">Mis Programas</h1>
-        <p className="text-sm text-muted-foreground">Historial de maestrías, diplomados y cursos de especialización.</p>
       </div>
 
       {/* 1. SECCIÓN DE RESUMEN */}
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Programas Totales</CardTitle>
+            <CardTitle className="text-lg font-medium">Programas Totales</CardTitle>
             <GraduationCap className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{summary.total}</div>
-            <p className="text-xs text-muted-foreground">Historial académico completo</p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Cursando</CardTitle>
+            <CardTitle className="text-lg font-medium">Programas Activos</CardTitle>
             <BookOpen className="h-4 w-4 text-uagrm-blue" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-uagrm-blue">{summary.active}</div>
-            <p className="text-xs text-muted-foreground">Programas en progreso</p>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Completados</CardTitle>
+            <CardTitle className="text-lg font-medium">Programas Completados</CardTitle>
             <Trophy className="h-4 w-4 text-emerald-600" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-emerald-600">{summary.completed}</div>
-            <p className="text-xs text-muted-foreground">Titulaciones obtenidas</p>
           </CardContent>
         </Card>
       </div>

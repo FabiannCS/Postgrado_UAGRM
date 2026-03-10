@@ -36,7 +36,6 @@ export function ProgramDetailsModal({ isOpen, onClose, program }: ProgramDetails
     switch (status) {
       case "Activo": return "bg-blue-600";
       case "Completado": return "bg-emerald-600";
-      case "Por Iniciar": return "bg-amber-500";
       default: return "bg-slate-500";
     }
   };
